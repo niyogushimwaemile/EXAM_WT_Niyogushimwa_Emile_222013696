@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2024 at 09:10 AM
+-- Generation Time: May 26, 2024 at 10:45 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -95,7 +95,8 @@ INSERT INTO `customer` (`CustomerID`, `Name`, `email`, `Address`, `Phone`, `regi
 (3, 'Not Defined', 'emile2@gmail.com', NULL, NULL, NULL),
 (4, 'Not Defined', 'mup@hmail.fr', NULL, NULL, NULL),
 (5, 'Not Defined', 'emile@gmail.com3', NULL, NULL, NULL),
-(6, 'Not Defined', 'emile@gmail.comb', NULL, NULL, '2024-05-22 23:56:55');
+(6, 'Not Defined', 'emile@gmail.comb', NULL, NULL, '2024-05-22 23:56:55'),
+(7, 'Not Defined', 'emile@gmail.comm', NULL, NULL, '2024-05-23 07:21:13');
 
 -- --------------------------------------------------------
 
@@ -157,11 +158,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`ProductID`, `prod_name`, `description`, `price`, `photo`, `vendor_id`) VALUES
-(1, 'Amapantaro', 'Twabazaniye ama pantaron qualite  ya 1 kuva mubutariyani.', 20000, 'assets/img/usersimages.jpeg', 1),
-(8, 'ibijumba', 'my product', 12, 'assets/img/usersPermission1.jpg', 1),
-(9, 'UBPort', 'jnjnj', 700, 'assets/img/productsbeckam.png', 1),
-(11, 'UBPort', 'i', 7000000, 'assets/img/productsbhbh.jpg', 1),
-(12, 'ibijumba', 'jhghhfdhdgf', 5, 'assets/img/productsben.jpg', 1);
+(1, 'Amapantaro', 'Twabazaniye ama pantaron qualite  ya 1 kuva mubutariyani.', 20000, 'assets/img/userspent.jpg', 1),
+(8, 'ibijumba', 'my product', 12, 'assets/img/userspotato.jpg', 1),
+(9, 't-shirts', 'new vesion', 700, 'assets/img/userst-shirt.jpg', 1),
+(11, 'shorts', 'q', 7000000, 'assets/img/usersshirts.jpg', 1),
+(12, 'jins', 'high quality', 500, 'assets/img/usersjins.jpg', 1),
+(13, 'clothes', 'new version', 3000, 'assets/img/usersaaa.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,8 @@ INSERT INTO `subscriptions` (`subscriptionID`, `customerID`, `productID`, `Start
 (26, 1, 2, '2024-05-23', '2024-06-08', 'Approved'),
 (27, 1, 1, '2024-05-23', '2024-05-29', 'Approved'),
 (28, 1, 1, '2024-05-23', '2024-06-06', 'Approved'),
-(29, 6, 1, '2024-05-23', '2024-06-08', 'Approved');
+(29, 6, 1, '2024-05-23', '2024-06-08', 'Approved'),
+(30, 7, 9, '2024-05-23', '2024-06-06', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -265,9 +268,10 @@ CREATE TABLE `vendors` (
 --
 
 INSERT INTO `vendors` (`VendorID`, `firstname`, `lastname`, `phone`, `company`, `address`, `email`, `password`, `RegistrationDate`, `UserType`, `profile`) VALUES
-(1, 'NIYOGUSHIMWA', 'Emile', '078887736', 'EmileTech Ltd', 'KIBAGABAGA', 'emile@gmail.com', '123', '2024-05-15 22:00:00', 'vendor', 'assets/img/messages-3.jpg'),
+(1, 'NIYOGUSHIMWA', 'Emile', '078887736', 'EmileTech Ltd', 'KIBAGABAGA', 'emile@gmail.com', '123', '2024-05-26 19:50:17', 'vendor', 'assets/img/emile.jpg'),
 (2, 'MUGISHA', 'Aime', '0782203457', 'KIKUU', 'KIZIGURO', 'aime@gmail.com', '123', '2024-05-23 06:41:30', 'vendor', 'assets/img/usersbeckam.png'),
-(3, 'NIYOGUSHIMWA', 'Emile', '0782203457', 'KIKUU', 'NGOMA', 'niyogushimwaemile@gmail.com', '5555', '2024-05-23 06:46:41', 'vendor', 'assets/img/usersWIN_20240406_16_40_00_Pro.jpg');
+(3, 'KARIZA', 'Merisa', '0782203457', 'KIKUU', 'NGOMA', 'niyogushimwaemile@gmail.com', '5555', '2024-05-23 09:29:23', 'vendor', 'assets/img/usersWIN_20240406_16_40_00_Pro.jpg'),
+(4, 'BIZIMANA', 'Claude', '112', 'Meitech LTD', 'Kimisagara', 'claude@gmail.com', '123', '2024-05-26 20:28:41', 'vendor', 'assets/img/usersdownload (2).jpeg');
 
 --
 -- Indexes for dumped tables
@@ -347,25 +351,25 @@ ALTER TABLE `activities`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `subscriptions`
 --
 ALTER TABLE `subscriptions`
-  MODIFY `subscriptionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `subscriptionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `vendors`
 --
 ALTER TABLE `vendors`
-  MODIFY `VendorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `VendorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
